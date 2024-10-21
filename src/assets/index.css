@@ -1,0 +1,68 @@
+@import "~boxicons/css/boxicons.min.css";
+@import "~sweetalert2/dist/sweetalert2.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .auth-page{
+    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(
+            -135deg, #c850c0, #4158d0);
+  }
+  .disabledArea {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  .clickable {
+    cursor: pointer;
+  }
+  .status-type{
+    position: absolute;
+    right:12px;
+    top:8px;
+    color:white;
+    font-size:20px;
+  }
+  .status-image{
+    max-height: 300px
+  }
+  .status-img-md{
+    height: 250px
+  }
+  .status-img-lg{
+    height: 450px
+  }
+  .status-image-desktop{
+    max-height: 450px
+  }
+  .status-image-full{
+    height:auto;
+  }
+  .h-60px {
+    height: 60px;
+  }
+  .h-55px {
+    height: 55px;
+  }
+  .h-70px {
+    height: 70px;
+  }
+  .h-75px {
+    height: 75px;
+  }
+  .h-80px {
+    height: 80px;
+  }
+  .b-55px{
+    bottom: 55px;
+  }
+  .b-70px{
+    bottom: 70px;
+  }
+  .b-75px{
+    bottom: 75px;
+  }
+}

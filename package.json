@@ -1,0 +1,38 @@
+{
+  "name": "rewardy-client",
+  "version": "1.1.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "rocket": "vite --host 0.0.0.0 --port 8080"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "prettier": "2.5.1",
+    "tailwindcss": "^3.1.6",
+    "vite": "^3.0.0",
+    "vue-stripe-elements-plus": "^1.0.3"
+  },
+  "dependencies": {
+    "@vitejs/plugin-legacy": "^2.0.0",
+    "@vitejs/plugin-vue2": "^1.1.2",
+    "axios": "^0.24.0",
+    "boxicons": "^2.1.1",
+    "daisyui": "1.25.4",
+    "moment": "^2.29.1",
+    "sweetalert2": "11.1.5",
+    "terser": "^5.14.2",
+    "vue": "^2.7.8",
+    "vue-chat-scroll": "^1.4.0",
+    "vue-content-placeholders": "^0.2.1",
+    "vue-infinite-loading": "^2.4.5",
+    "vue-plyr": "^7.0.0",
+    "vue-progressbar": "^0.7.5",
+    "vue-router": "^3.5.3",
+    "vuex": "^3.6.2"
+  }
+}

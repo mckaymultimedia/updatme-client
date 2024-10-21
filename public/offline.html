@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>You are offline</title>
+    <style>
+        .main {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: aliceblue;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            line-height: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+        }
+
+    </style>
+</head>
+<body style="background-color: #2A2E37;">
+<div class="main">
+    <h1>You Are Offline !</h1>
+    <h3>Click the button below to try reloading.</h3>
+    <div>
+        <button type="button" style="font-size: 1.25rem; margin-top: 10px; border-radius: 0.5rem;">⤾ Reload</button>
+    </div>
+</div>
+
+<script>
+    document.querySelector("button").addEventListener("click", () => {
+        window.location.reload();
+    });
+    window.addEventListener('online', () => {
+        window.location.reload();
+    });
+
+    async function checkNetworkAndReload() {
+        try {
+            const response = await fetch('.');
+            if (response.status >= 200 && response.status < 500) {
+                window.location.reload();
+                return;
+            }
+        } catch {
+        }
+        window.setTimeout(checkNetworkAndReload, 2500);
+    }
+
+    checkNetworkAndReload();
+</script>
+</body>
+</html>
